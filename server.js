@@ -17,7 +17,7 @@ app.use(methodOverride("method"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
-app.get("/", (req, res) => {
+app.get("/anime", (req, res) => {
     res.send("<h1>Server is working</h1>")
 })
 
