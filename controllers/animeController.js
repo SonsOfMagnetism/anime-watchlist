@@ -15,6 +15,12 @@ router.get("/new", (req, res) => {
 })
 
 // Delete
+router.delete("/:id", (req, res) => {
+    const id = req.params.id
+    Anime.findByIdAndRemove(id, (err, anime) => {
+        res.redirect("/anime")
+    })
+})
 
 // Update
 router.put(":id", (req, res) => {
@@ -34,6 +40,12 @@ router.post("/", (req, res) => {
 })
 
 // Edit
+router.get(":id/edit", (req, res) => {
+    const id = req.params.id
+    Anime.findById(id, (err, anime) => {
+        res.render("anime/edit.ejs", {anime})
+    })
+})
 
 // Show
 router.get("/:id", (req, res) => {
