@@ -12,6 +12,8 @@ A web application that will allow a user to create an account and keep track of 
 - Node
 - jQuery
 - Google Fonts
+- MongoDB
+
 ### Link to Trello Board
 [https://trello.com/invite/b/H1sGLWSz/ATTI5de8c7da846de2a1797ca87dc8eaa933876F5226/1st]
 
@@ -26,4 +28,4 @@ A web application that will allow a user to create an account and keep track of 
 ![](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/Ce29b951e14474160955ed6d4d4b2571a/projects/MryjLED0L/pages/D8bfc1fe3305cace5a6c0d48ca01514ec/image/D8bfc1fe3305cace5a6c0d48ca01514ec.png?1670357943986)
 
 ### Link to App
-[My Anime Watchlist](https://anime-watchlist.onrender.com/)
+[My Anime Watchlist](https://anime-watchlist.onrender.com/anime)

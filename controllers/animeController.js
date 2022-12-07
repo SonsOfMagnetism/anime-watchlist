@@ -10,12 +10,21 @@ router.get("/", async(req, res) => {
 })
 
 // New
+router.get("/new", (req, res) => {
+    res.render("anime/new.ejs")
+})
 
 // Delete
 
 // Update
 
 // Create
+router.post("/", (req, res) => {
+    req.body.completed = req.body.completed === "on" ? true : false
+    Anime.create(req.body, (err, anime) => {
+        res.redirect("/anime")
+    })
+})
 
 // Edit
 
