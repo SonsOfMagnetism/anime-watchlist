@@ -20,5 +20,11 @@ router.get("/", async(req, res) => {
 // Edit
 
 // Show
+router.get("/:id", (req, res) => {
+    const id = req.params.id
+    Anime.findById(id, (err, anime) => {
+        res.render("anime/show.ejs", {anime})
+    })
+})
 
 module.exports = router
