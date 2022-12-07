@@ -17,6 +17,13 @@ router.get("/new", (req, res) => {
 // Delete
 
 // Update
+router.put(":id", (req, res) => {
+    const id = req.params.id
+    req.body.completed = req.body.completed === "on" ? true : false
+    Anime.findByIdAndUpdate(id, req.body, {new: true}, (err, anime) => {
+        res.redirect("/anime")
+    })
+})
 
 // Create
 router.post("/", (req, res) => {
