@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %> 
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+        <a href="/anime/new"><button>Add an anime</button></a>
+        <% for (anime of animes) { %>
+            <a href="/anime/<%= anime._id %>">
+                <h2>
+                    <%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %>  
+                </h2>
+            </a>
+        <% } %> 
+    </main>
+</body>
+</html>
