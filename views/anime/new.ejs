@@ -2,6 +2,29 @@
 <html lang="en">
 <%- include("../partials/head.ejs") %> 
 <body>
-    <%- include("../partials/header.ejs") %> 
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <form action="/anime" method="post">
+        <fieldset>
+            <legend>Add an anime</legend>
+            <label>
+                Title: <input type="text" name="title" placeholder="enter anime title">
+            </label>
+            <label>
+                Completed: <input type="checkbox" name="completed">
+            </label>
+            <label>
+                Year Released: <input type="number" name="yearReleased">
+            </label>
+            <label>
+                Watched Episodes: <input type="number" name="watchedEpisodes">
+            </label>
+            <label>
+                Total Episodes: <input type="number" name="totalEpisodes">
+            </label>
+        </fieldset>
+        <input type="submit" value="Create new anime">
+        </form>
+    </main>
 </body>
 </html>
