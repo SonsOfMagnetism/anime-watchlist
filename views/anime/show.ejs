@@ -8,7 +8,7 @@
         <h3>Year Released: <%= anime.yearReleased %></h3>
         <h3>Watched Episodes: <%= anime.watchedEpisodes %></h3>
         <h3>Total Episodes: <%= anime.totalEpisodes %></h3>
-        <a href="/anime/<%= anime._id %>/edit"><button>Update</button></a>
+        <a href="/anime/<%= anime._id %>/edit"><button>Edit</button></a>
         <form action="/anime/<%= anime._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>

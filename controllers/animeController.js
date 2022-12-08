@@ -23,7 +23,7 @@ router.delete("/:id", (req, res) => {
 })
 
 // Update
-router.put(":id", (req, res) => {
+router.put("/:id", (req, res) => {
     const id = req.params.id
     req.body.completed = req.body.completed === "on" ? true : false
     Anime.findByIdAndUpdate(id, req.body, {new: true}, (err, anime) => {
@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
 })
 
 // Edit
-router.get(":id/edit", (req, res) => {
+router.get("/:id/edit", (req, res) => {
     const id = req.params.id
     Anime.findById(id, (err, anime) => {
         res.render("anime/edit.ejs", {anime})

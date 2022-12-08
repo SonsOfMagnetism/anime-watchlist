@@ -2,6 +2,29 @@
 <html lang="en">
 <%- include("../partials/head.ejs") %> 
 <body>
-    <%- include("../partials/header.ejs") %> 
+    <%- include("../partials/header.ejs") %>
+    <main>
+        <form action="/anime/<%= anime._id %>?_method=PUT" method="post">
+        <fieldset>
+            <legend>Edit <%= anime.name %> </legend>
+            <label>
+                Title: <input type="text" name="title" placeholder="enter anime title" value="<%= anime.title %>">
+            </label>
+            <label>
+                Completed: <input type="checkbox" name="completed" <%= anime.completed  ? "checked" : "" %>>
+            </label>
+            <label>
+                Year Released: <input type="number" name="yearReleased" value="<%= anime.watchedEpisodes %>">
+            </label>
+            <label>
+                Watched Episodes: <input type="number" name="watchedEpisodes" value="<%= anime.watchedEpisodes %>">
+            </label>
+            <label>
+                Total Episodes: <input type="number" name="totalEpisodes" value="<%= anime.totalEpisodes %>">
+            </label>
+        </fieldset>
+        <input type="submit" value="Update anime">
+        </form>
+    </main>
 </body>
 </html>
