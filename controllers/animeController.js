@@ -3,6 +3,14 @@ const Anime = require("../models/anime")
 
 const router = express.Router()
 
+router.use((req, res, next) => {
+    if(req.session.loggedIn) {
+        next()
+    } else {
+        res.redirect("/user/login")
+    }
+})
+
 // Index
 router.get("/", async(req, res) => {
     const animes = await Anime.find({})

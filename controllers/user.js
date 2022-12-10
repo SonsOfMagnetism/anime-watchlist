@@ -28,14 +28,19 @@ router.post("/login", (req, res) => {
             const result = bcrypt.compareSync(password, user.password)
             if (result) {
                 req.session.username = username
-                req.session.loggedIn =true
+                req.session.loggedIn = true
                 res.redirect("/anime")
             } else {
                 res.send("wrong password")
             }
         }
     })
-    res.send("login")
+})
+
+router.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        res.redirect("/")
+    })
 })
 
 module.exports = router
