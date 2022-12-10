@@ -4,17 +4,13 @@
 <body>
     <%- include("./partials/header.ejs") %> 
     <main class="parent">
-        <div class="left-side">
-            <img src="https://i.redd.it/lv2gqgk7led91.jpg">
-        </div>
-        <div class="section green">
-            <p>A web application that will allow a user to create an account and keep track of any anime they are currrently watching or have completed watching.</p>
+        <%- include("./partials/left-div.ejs") %> 
+        <div>
             <a href="/user/signup"><button>Signup</button></a>
             <a href="/user/login"><button>Login</button></a>
+            <p>A web application that will allow a user to create an account and keep track of any anime they are currrently watching or have completed watching.</p>
         </div>
-        <div class="right-side">
-            <img src="https://toppng.com/uploads/preview/img-bleach-shunsui-11563789096s2mbnhmwgs.png" alt="Shinsui Kyouraku" sizes="(max-width: 600px) 480px, 400px">
-        </div>
+        <%- include("./partials/right-div.ejs") %> 
     </main>
 </body>
 </html>

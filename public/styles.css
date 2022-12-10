@@ -29,6 +29,14 @@ footer {
 }
 
 img {
-    max-width: 400px;
-    max-height: 400px;
+    width: 200px;
+    max-height: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
