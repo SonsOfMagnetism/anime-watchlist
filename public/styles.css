@@ -84,6 +84,7 @@ img {
 .create-new input {
     background-color: brown;
     padding: 20px;
+    margin-top: 20px;
     font-size: 17px;
     border-style: double;
 }

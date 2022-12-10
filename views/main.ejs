@@ -3,13 +3,14 @@
 <%- include("./partials/head.ejs") %> 
 <body>
     <%- include("./partials/header.ejs") %>
-    <div class="navbar">
-        <a href="/user/signup"><button>Signup</button></a>
-        <a href="/user/login"><button>Login</button></a>
-    </div>
+
     <main class="parent">
         <%- include("./partials/left-div.ejs") %> 
         <div>
+            <div class="navbar">
+                <a href="/user/signup"><button>Signup</button></a>
+                <a href="/user/login"><button>Login</button></a>
+            </div>
 
             <p>A web application that will allow a user to create an account and keep track of any anime they are currrently watching or have completed watching.</p>
 
