@@ -23,7 +23,7 @@ app.use("/anime", AnimeRouter)
 app.use("/user", UserRouter)
 
 app.get("/", (req, res) => {
-    res.render("index.ejs")
+    res.render("main.ejs")
 })
 
 app.listen(PORT, () => {
