@@ -20,6 +20,21 @@ router.get("/login", (req, res) => {
 })
 
 router.post("/login", (req, res) => {
+    const { username, password } = req.body
+    User.findOne({ username }, (err, user) => {
+        if (!user) {
+            res.send("user does't exist")
+        } else {
+            const result = bcrypt.compareSync(password, user.password)
+            if (result) {
+                req.session.username = username
+                req.session.loggedIn =true
+                res.redirect("/anime")
+            } else {
+                res.send("wrong password")
+            }
+        }
+    })
     res.send("login")
 })
 

@@ -14,6 +14,10 @@ app.use(express.static("public"))
 app.use("/anime", AnimeRouter)
 app.use("/user", UserRouter)
 
+app.get("/", (req, res) => {
+    res.render("index.ejs")
+})
+
 app.listen(PORT, () => {
     console.log(`You are now on Port: ${PORT}`)
 })
