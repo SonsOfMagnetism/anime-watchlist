@@ -6,6 +6,9 @@
     <main class="parent">
         <%- include("../partials/left-div.ejs") %>
         <div>
+            <div class="navbar2">
+                <a href="/anime"><button>Home</button></a>
+            </div>
         <form action="/anime/<%= anime._id %>?_method=PUT" method="post">
         <fieldset>
             <legend>Edit <%= anime.name %> </legend>
@@ -25,10 +28,13 @@
                 Total Episodes: <input type="number" name="totalEpisodes" value="<%= anime.totalEpisodes %>">
             </label>
         </fieldset>
+        <div class="create-new">
         <input type="submit" value="Update anime">
+    </div>
         </form>
         </div>
         <%- include("../partials/right-div.ejs") %>
+        <%- include("../partials/footer.ejs") %> 
     </main>
 </body>
 </html>

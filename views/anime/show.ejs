@@ -3,19 +3,31 @@
 <%- include("../partials/head.ejs") %> 
 <body>
     <%- include("../partials/header.ejs") %>
+
     <main class="parent">
         <%- include("../partials/left-div.ejs") %> 
         <div>
-        <h2><%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %></h2>
-        <h3>Year Released: <%= anime.yearReleased %></h3>
-        <h3>Watched Episodes: <%= anime.watchedEpisodes %></h3>
-        <h3>Total Episodes: <%= anime.totalEpisodes %></h3>
-        <a href="/anime/<%= anime._id %>/edit"><button>Edit</button></a>
-        <form action="/anime/<%= anime._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete">
-        </form>
+            <div class="navbar2">
+                <a href="/anime"><button>Home</button></a>
+            </div>
+            <h2><%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %></h2>
+            <h3>Year Released: <%= anime.yearReleased %></h3>
+            <h3>Watched Episodes: <%= anime.watchedEpisodes %></h3>
+            <h3>Total Episodes: <%= anime.totalEpisodes %></h3>
+            <span class="edit">
+
+        </span>
         </div>
         <%- include("../partials/right-div.ejs") %> 
+        <footer>    
+            <div class="show">
+                <a href="/anime/<%= anime._id %>/edit"><button>Edit</button></a>
+                <form action="/anime/<%= anime._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="edit">
+                </form>
+                <a href="/user/logout"><button>Logout</button></a>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

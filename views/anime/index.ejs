@@ -6,7 +6,9 @@
     <main class="parent">
         <%- include("../partials/left-div.ejs") %> 
         <div>
-            <a href="/anime/new"><button>Add an anime</button></a>
+            <div class="navbar2">
+                <a href="/anime/new"><button>Add an anime</button></a>
+            </div>
             <% for (anime of animes) { %>
                 <a href="/anime/<%= anime._id %>">
                     <h2>
@@ -14,9 +16,9 @@
                     </h2>
                 </a>
             <% } %> 
-            <a href="/user/logout"><button>Logout</button></a>
         </div>
         <%- include("../partials/right-div.ejs") %> 
+        <%- include("../partials/footer.ejs") %> 
     </main>
 </body>
 </html>
