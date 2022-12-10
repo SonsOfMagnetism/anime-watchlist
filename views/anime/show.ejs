@@ -3,7 +3,9 @@
 <%- include("../partials/head.ejs") %> 
 <body>
     <%- include("../partials/header.ejs") %>
-    <main>
+    <main class="parent">
+        <%- include("../partials/left-div.ejs") %> 
+        <div>
         <h2><%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %></h2>
         <h3>Year Released: <%= anime.yearReleased %></h3>
         <h3>Watched Episodes: <%= anime.watchedEpisodes %></h3>
@@ -12,6 +14,8 @@
         <form action="/anime/<%= anime._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>
+        </div>
+        <%- include("../partials/right-div.ejs") %> 
     </main>
 </body>
 </html>

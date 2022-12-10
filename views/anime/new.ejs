@@ -3,7 +3,9 @@
 <%- include("../partials/head.ejs") %> 
 <body>
     <%- include("../partials/header.ejs") %>
-    <main>
+    <main class="parent">
+        <%- include("../partials/left-div.ejs") %>
+        <div>
         <form action="/anime" method="post">
         <fieldset>
             <legend>Add an anime</legend>
@@ -25,6 +27,8 @@
         </fieldset>
         <input type="submit" value="Create new anime">
         </form>
+        </div>
+        <%- include("../partials/right-div.ejs") %>
     </main>
 </body>
 </html>

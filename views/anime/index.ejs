@@ -3,16 +3,20 @@
 <%- include("../partials/head.ejs") %> 
 <body>
     <%- include("../partials/header.ejs") %> 
-    <main>
-        <a href="/anime/new"><button>Add an anime</button></a>
-        <% for (anime of animes) { %>
-            <a href="/anime/<%= anime._id %>">
-                <h2>
-                    <%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %>  
-                </h2>
-            </a>
-        <% } %> 
-        <a href="/user/logout"><button>Logout</button></a>
+    <main class="parent">
+        <%- include("../partials/left-div.ejs") %> 
+        <div>
+            <a href="/anime/new"><button>Add an anime</button></a>
+            <% for (anime of animes) { %>
+                <a href="/anime/<%= anime._id %>">
+                    <h2>
+                        <%= anime.title %> - <%= anime.completed ? "Completed" : "Not Completed" %>  
+                    </h2>
+                </a>
+            <% } %> 
+            <a href="/user/logout"><button>Logout</button></a>
+        </div>
+        <%- include("../partials/right-div.ejs") %> 
     </main>
 </body>
 </html>
