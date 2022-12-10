@@ -12,9 +12,10 @@ router.use((req, res, next) => {
 })
 
 // Index
-router.get("/", async(req, res) => {
-    const animes = await Anime.find({})
-    res.render("anime/index.ejs", { animes })
+router.get("/", (req, res) => {
+    Anime.find({username: req.session.username}, (err, animes) => {
+        res.render("anime/index.ejs", { animes })
+    })
 })
 
 // New
@@ -42,6 +43,7 @@ router.put("/:id", (req, res) => {
 // Create
 router.post("/", (req, res) => {
     req.body.completed = req.body.completed === "on" ? true : false
+    req.body.username = req.session.username
     Anime.create(req.body, (err, anime) => {
         res.redirect("/anime")
     })

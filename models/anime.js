@@ -5,7 +5,8 @@ const animesSchema = new Schema({
     yearReleased: Number,
     watchedEpisodes: Number,
     totalEpisodes: Number,
-    completed: Boolean
+    completed: Boolean,
+    username: String
 })
 const Anime = model("Anime", animesSchema)
 
