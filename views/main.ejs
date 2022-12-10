@@ -3,10 +3,17 @@
 <%- include("./partials/head.ejs") %> 
 <body>
     <%- include("./partials/header.ejs") %> 
-    <main>
-        <div>
+    <main class="parent">
+        <div class="left-side">
+            <img src="https://i.redd.it/lv2gqgk7led91.jpg">
+        </div>
+        <div class="section green">
+            <p>A web application that will allow a user to create an account and keep track of any anime they are currrently watching or have completed watching.</p>
             <a href="/user/signup"><button>Signup</button></a>
             <a href="/user/login"><button>Login</button></a>
+        </div>
+        <div class="right-side">
+            <img src="https://toppng.com/uploads/preview/img-bleach-shunsui-11563789096s2mbnhmwgs.png" alt="Shinsui Kyouraku" sizes="(max-width: 600px) 480px, 400px">
         </div>
     </main>
 </body>
